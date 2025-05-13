@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>工业设计作品集 - 蔡迅</title>
   <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet" />
   <style>
@@ -71,6 +71,7 @@
       align-items: center;
       gap: 3rem;
       background: transparent;
+      cursor: pointer;
     }
     .project-section:nth-child(odd) {
       flex-direction: row-reverse;
@@ -80,6 +81,10 @@
       max-width: 550px;
       height: auto;
       border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .project-section:hover img {
+      transform: scale(1.02);
     }
     .project-text {
       flex: 1;
@@ -101,6 +106,7 @@
       justify-content: center;
       gap: 4rem;
       align-items: center;
+      cursor: pointer;
     }
     .about-left {
       font-size: 2.5rem;
@@ -119,19 +125,6 @@
       font-size: 0.8rem;
       color: #999;
     }
-    @media (max-width: 768px) {
-      .project-section {
-        flex-direction: column !important;
-      }
-      .about-section {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-      }
-      .timeline {
-        display: none;
-      }
-    }
   </style>
 </head>
 <body>
@@ -148,7 +141,7 @@
   </div>
 
   <div class="section-wrapper">
-    <section class="project-section">
+    <section class="project-section" onclick="location.href='project1.html'">
       <img src="ricecooker.jpg" alt="电饭煲" />
       <div class="project-text">
         <div class="project-title">至尊宝</div>
@@ -158,7 +151,7 @@
   </div>
 
   <div class="section-wrapper">
-    <section class="project-section" style="flex-direction: row !important">
+    <section class="project-section" style="flex-direction: row !important" onclick="location.href='project2.html'">
       <img src="dispenser.jpg" alt="饮水机" />
       <div class="project-text">
         <div class="project-title">即热饮水机</div>
@@ -168,7 +161,7 @@
   </div>
 
   <div class="section-wrapper">
-    <section class="project-section">
+    <section class="project-section" onclick="location.href='project3.html'">
       <img src="egg.jpg" alt="煮蛋器" />
       <div class="project-text">
         <div class="project-title">双层煮蛋器</div>
@@ -177,7 +170,7 @@
     </section>
   </div>
 
-  <section class="about-section">
+  <section class="about-section" onclick="location.href='about.html'">
     <div class="about-left">蔡迅</div>
     <div class="about-right">
       深圳工业设计师，擅长产品定义、外观建模与可视化表达，精通 Rhino、Keyshot、PS、AI 等设计工具，合作品牌包括美的、小熊等。
